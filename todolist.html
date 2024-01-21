@@ -1,66 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    #todoList {
-      max-width: 400px;
-      margin: 50px auto;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    input[type="text"] {
-      width: 70%;
-      padding: 8px;
-    }
-
-    button {
-      padding: 8px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div id="todoList">
-  <h2>To-Do List</h2>
-  <ul id="tasksList"></ul>
-  <div>
-    <input type="text" id="newTask" placeholder="New task...">
-    <button onclick="addTask()">Add</button>
-  </div>
+<div id="todo-list">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="New task...">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="tasks"></ul>
 </div>
 
-<script>
-  function addTask() {
-    var taskInput = document.getElementById("newTask");
-    var taskText = taskInput.value.trim();
-
-    if (taskText !== "") {
-      var tasksList = document.getElementById("tasksList");
-      var newTask = document.createElement("li");
-      newTask.textContent = taskText;
-      tasksList.appendChild(newTask);
-
-      // Clear the input field
-      taskInput.value = "";
-    }
-  }
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
