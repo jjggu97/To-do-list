@@ -3,23 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Simple To-Do List</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="color-menu">
-    <button onclick="changeColor('#f8f9fa')">Light</button>
-    <button onclick="changeColor('#343a40')">Dark</button>
-  </div>
+  <h1>To-Do List</h1>
 
-  <div class="todo-container">
-    <h1>To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Add a new task...">
-    <button onclick="addTask()">Add Task</button>
-    <ul id="taskList"></ul>
-  </div>
+  <input type="text" id="newTask" placeholder="Add a new task">
+  <button onclick="addTask()">Add Task</button>
 
-  <script src="app.js"></script>
+  <ul id="taskList"></ul>
+
+  <script>
+    function addTask() {
+      // 입력 필드에서 값을 가져옴
+      var taskInput = document.getElementById("newTask");
+      var taskText = taskInput.value;
+
+      // 입력 필드가 비어있지 않은 경우에만 실행
+      if (taskText.trim() !== "") {
+        // 새로운 리스트 아이템 생성
+        var listItem = document.createElement("li");
+        listItem.textContent = taskText;
+
+        // 리스트에 아이템 추가
+        document.getElementById("taskList").appendChild(listItem);
+
+        // 입력 필드 초기화
+        taskInput.value = "";
+      }
+    }
+  </script>
+
 </body>
 </html>
