@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdfdea; /* Updated background color to a light yellow */
+    background-color: #fdfdea;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 #todo-list {
-    background-color: #fff9c4; /* Updated background color to a pale yellow */
+    background-color: #fff9c4;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -19,8 +19,8 @@ body {
 }
 
 h2 {
-    color: #000000; /* Updated title color to yellow */
-    background-color: #fbc02d; /* Updated header background color */
+    color: #000000;
+    background-color: #fbc02d;
     margin: 0;
     padding: 20px;
     font-size: 1.5em;
@@ -32,14 +32,14 @@ input[type="text"] {
     padding: 10px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #ffca28; /* Updated input border color to yellow */
+    border-bottom: 2px solid #ffca28;
     outline: none;
 }
 
 button {
     padding: 10px;
     cursor: pointer;
-    background-color: #ffca28; /* Updated button background color to yellow */
+    background-color: #ffca28;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -48,7 +48,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffb300; /* Updated button hover color to a darker yellow */
+    background-color: #ffb300;
 }
 
 ul {
@@ -58,7 +58,7 @@ ul {
 
 li {
     padding: 10px;
-    border-bottom: 1px solid #ffe082; /* Updated list item border color to a lighter yellow */
+    border-bottom: 1px solid #ffe082;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,11 +66,16 @@ li {
 }
 
 li:hover {
-    background-color: #fff59d; /* Updated list item hover color to a light yellow */
+    background-color: #fff59d;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
 }
 
 button.remove-btn {
-    background-color: #f57f17; /* Updated remove button color to a darker yellow */
+    background-color: #f57f17;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -80,5 +85,5 @@ button.remove-btn {
 }
 
 button.remove-btn:hover {
-    background-color: #e65100; /* Updated remove button hover color to a darker orange */
+    background-color: #e65100;
 }

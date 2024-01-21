@@ -9,7 +9,17 @@ function addTask() {
 
     var tasksList = document.getElementById("tasks");
     var newTask = document.createElement("li");
-    newTask.textContent = taskText;
+
+    // Add a checkbox to mark the task as completed
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.onclick = function () {
+        if (checkbox.checked) {
+            newTask.classList.add("completed");
+        } else {
+            newTask.classList.remove("completed");
+        }
+    };
 
     // Add a button to remove the task
     var removeButton = document.createElement("button");
@@ -19,6 +29,9 @@ function addTask() {
         tasksList.removeChild(newTask);
     };
 
+    newTask.appendChild(checkbox);
+    newTask.appendChild(document.createTextNode(" ")); // Add space between checkbox and task text
+    newTask.appendChild(document.createTextNode(taskText));
     newTask.appendChild(removeButton);
     tasksList.appendChild(newTask);
 
