@@ -17,5 +17,9 @@ function addTask() {
       
       taskInput.value = '';
     }
+
+    function changeColor(color){
+      document.body.style.backgroundcolor = color;
+    }
   }
   
